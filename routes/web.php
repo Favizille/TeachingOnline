@@ -15,5 +15,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [AuthController::class, "registerPage"])->name("register_view");
+Route::get('/login',[AuthController::class, "LoginPage"])->name("login_view");
 Route::post('/', [AuthController::class, "register"])->name("register");
 Route::post('/login', [AuthController::class, 'login'])->name("login");

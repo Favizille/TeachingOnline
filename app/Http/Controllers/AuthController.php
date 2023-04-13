@@ -21,11 +21,16 @@ class AuthController extends Controller
     }
 
     public function registerPage(){
-        return view("master");
+        return view("Auth.register");
+    }
+
+    public function loginPage(){
+        return view("Auth.login");
     }
 
     public function register(RegisterRequest $request)
     {
+        // dd($request);
         $registeredUser = $this->authRepository->register($request->validated());
 
         if(!$registeredUser){

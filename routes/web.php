@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,3 +19,10 @@ Route::get('/', [AuthController::class, "registerPage"])->name("register_view");
 Route::get('/login',[AuthController::class, "LoginPage"])->name("login_view");
 Route::post('/', [AuthController::class, "register"])->name("register");
 Route::post('/login', [AuthController::class, 'login'])->name("login");
+
+Route::get('/lessons', [UserController::class, "allLessons"])->name("lessons.all");
+
+
+//to do
+// 1. User UI
+// 2. Tutor's UI

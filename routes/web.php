@@ -21,7 +21,7 @@ Route::post('/', [AuthController::class, "register"])->name("register");
 Route::post('/login', [AuthController::class, 'login'])->name("login");
 
 Route::get('/lessons', [UserController::class, "allLessons"])->name("lessons.all");
-
+Route::get('/dashboard', [UserController::class, "dashboard"]);
 
 //to do
 // 1. User UI

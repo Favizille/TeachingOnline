@@ -17,12 +17,16 @@ class AuthRepository
     public function register($data){
         $data["password"] = bcrypt($data['password']);
 
+        $newImageName = time()."_" . $data['first_name'] . "_" . $data["image_path"]->extension();
+        $image= $data["image_path"]->move(public_path('images'), $newImageName);
+
+        $data["image_path"] = $image;
         $this->user->create($data);
 
         auth()->login($this->user->where('email', $data['email'])->first());
 
         return[
-            "status" => self::FALSE,
+            "status" => self::TRUE,
             "data" => $data,
         ];
     }

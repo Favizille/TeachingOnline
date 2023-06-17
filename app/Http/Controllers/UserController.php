@@ -9,4 +9,8 @@ class UserController extends Controller
     public function allLessons(){
         return view("User.lessons");
     }
+
+    public function dashboard(){
+        return view("User.dashboard");
+    }
 }

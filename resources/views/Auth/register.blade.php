@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="card-body col-6">
-        <form action="{{route('register')}}" method="POST">
+        <form action="{{route('register')}}" method="POST" enctype="multipart/form-data">
             @csrf
         <h2 class="mb-4 text-center"> Register Here</h2>
 

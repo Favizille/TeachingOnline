@@ -49,7 +49,7 @@
                 <span class="d-sm-inline d-none">Sign In</span>
               </a>
             </li>
-           
+
             <li class="nav-item px-3 d-flex align-items-center">
               <a href="javascript:;" class="nav-link text-body p-0">
                 <i class="fa fa-cog fixed-plugin-button-nav cursor-pointer"></i>
@@ -134,16 +134,16 @@
     </nav>
   </div>
   <div class="border-radius-xl mt-3 mx-3 position-relative" style="background-image: url('../assets/img/vr-bg.jpg') ; background-size: cover;">
-    
+
     <main class="main-content mt-1 border-radius-lg">
       <div class="section min-vh-85 position-relative transform-scale-0 transform-scale-md-7">
         <div class="container">
-
+            @yield("content")
         </div>
       </div>
     </main>
   </div>
-  
+
   <!--   Core JS Files   -->
   <script src="../assets/js/core/popper.min.js"></script>
   <script src="../assets/js/core/bootstrap.min.js"></script>

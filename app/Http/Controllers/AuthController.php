@@ -30,14 +30,13 @@ class AuthController extends Controller
 
     public function register(RegisterRequest $request)
     {
-        // dd($request);
         $registeredUser = $this->authRepository->register($request->validated());
 
         if(!$registeredUser){
             return self::FALSE;
         }
 
-        return self::TRUE;
+        return to_route("lessons.all");
     }
 
     public function login(LoginRequest $request)
